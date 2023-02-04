@@ -185,6 +185,8 @@
 .card h3 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  color: #000000;
 }
 
 .card h2 {
@@ -221,6 +223,14 @@
   color: #3c91ca;
   border-color: #3c91ca;
 }
+
+.card3 h2 {
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+}
+
+
 
 .logo {
   height: 5em;
