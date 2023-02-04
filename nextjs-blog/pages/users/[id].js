@@ -2,8 +2,12 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../../styles/Home.module.css';
 import profilestyles from '../../styles/profile.module.css';
+import { useRouter } from 'next/router'
 
-export default function Profile() {
+export default function Profile(props) {
+    const router = useRouter()
+    const {id} = router.query
+    const user = props.users[id];
     return (
         <div>
             <img src="/logonew.png" alt="Livance Logo" className={styles.logo}/>
@@ -25,26 +29,28 @@ export default function Profile() {
                 <div className={profilestyles.card}>
                     <main>
                         <h1>
-                            Name
+                            {user.name}
                         </h1>
                         <p className={profilestyles.title2}>Family or Friend</p>
                         <div>
-                            <img src="https://i.redd.it/zhf9kr5fjs661.jpg" className={profilestyles.user}></img>
+                            <img src={user.profilePic} className={profilestyles.user}></img>
                         </div>
                     </main>
                 </div>
                 <div className={profilestyles.card2}>
                     <main>
                         <h1>
-                            Current Health Status
+                            Status
                         </h1>
+                        <h2>{user.status}</h2>
                     </main>
                 </div>
                 <div className={profilestyles.card3}>
                     <main>
                         <h3>
-                            Message
+                            About
                         </h3>
+                        <h4>{user.about}</h4>
                     </main>
                 </div>
                 <div className={profilestyles.sidebarright}>
@@ -52,9 +58,39 @@ export default function Profile() {
                         <h1>
                             Health History
                         </h1>
+                        <h2>{user.history}</h2>
                     </main>
                 </div>
             </div>
         </div>
     )
+}
+
+// Fetching data from the JSON file
+import fsPromises from 'fs/promises';
+import path from 'path'
+export async function getStaticProps() {
+    const filePath = path.join(process.cwd(), 'data.json');
+    const jsonData = await fsPromises.readFile(filePath);
+    const objectData = JSON.parse(jsonData);
+    return {
+        props: objectData
+    }
+}
+
+export async function getStaticPaths() {
+    const filePath = path.join(process.cwd(), 'data.json');
+    const jsonData = await fsPromises.readFile(filePath);
+    const objectData = JSON.parse(jsonData);
+
+    const paths = objectData.users.map(user => {
+        return {
+            params: {id: user.id.toString()}
+        }
+    })
+  
+    return {
+      paths,
+      fallback: false
+    }
 }

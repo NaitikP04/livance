@@ -1,0 +1,44 @@
+{
+    "users": [
+        {
+            "id": 0,
+            "name": "Ryan Miller",
+            "status": "Slept in today",
+            "about": "this is an about thingy",
+            "history": "this is health history",
+            "profilePic": "https://i.redd.it/zhf9kr5fjs661.jpg"
+        },
+        {
+            "id": 1,
+            "name": "Naitik Poddar",
+            "status": "Naitik status",
+            "about": "this is an about thingy",
+            "history": "this is health history",
+            "profilePic": "https://i.redd.it/zhf9kr5fjs661.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Erik Phuong",
+            "status": "Erik status",
+            "about": "this is an about thingy",
+            "history": "this is health history",
+            "profilePic": "https://cdn.discordapp.com/attachments/1071312850271875072/1071575083832852530/9587850A-0AAA-447B-BFF1-D572B6C13EBE.JPG"
+        },
+        {
+            "id": 3,
+            "name": "Kirk Perez",
+            "status": "Kirk status",
+            "about": "this is an about thingy",
+            "history": "this is health history",
+            "profilePic": "https://i.redd.it/zhf9kr5fjs661.jpg"
+        },
+        {
+            "id": 3,
+            "name": "another person",
+            "status": "person status",
+            "about": "this is an about thingy",
+            "history": "this is health history",
+            "profilePic": "https://i.redd.it/zhf9kr5fjs661.jpg"
+        }
+    ]
+}
