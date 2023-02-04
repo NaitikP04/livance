@@ -22,7 +22,9 @@ export default function Profile() {
                     <title>Profile</title>
                 </Head>
                 {/* <div className={profilestyles.user}></div> */}
-                <img src="https://i.redd.it/zhf9kr5fjs661.jpg" class={profilestyles.user}></img>
+                <div >
+                    <img src="https://i.redd.it/zhf9kr5fjs661.jpg" class={profilestyles.user}></img>
+                </div>
                 <div className={profilestyles.card}>
                     <main>
                         <h1>
@@ -36,6 +38,13 @@ export default function Profile() {
                         <h1>
                             Current Health Status
                         </h1>
+                    </main>
+                </div>
+                <div className={profilestyles.card3}>
+                    <main>
+                        <h3>
+                            Message
+                        </h3>
                     </main>
                 </div>
                 <div className={profilestyles.sidebarright}>
