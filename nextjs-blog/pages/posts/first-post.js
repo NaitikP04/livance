@@ -6,7 +6,7 @@ export default function FirstPost() {
         <div className={styles.container}>
             <main>
                 <h1 className={styles.title}>
-                Go to <Link href="/">Home Page!</Link>
+                Go to <Link href="/">Home Page!</Link> New Change
                 </h1>
             </main>
         </div>
