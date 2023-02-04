@@ -22,15 +22,15 @@ export default function Profile() {
                     <title>Profile</title>
                 </Head>
                 {/* <div className={profilestyles.user}></div> */}
-                <div >
-                    <img src="https://i.redd.it/zhf9kr5fjs661.jpg" class={profilestyles.user}></img>
-                </div>
                 <div className={profilestyles.card}>
                     <main>
                         <h1>
                             Name
                         </h1>
                         <p className={profilestyles.title2}>Family or Friend</p>
+                        <div>
+                            <img src="https://i.redd.it/zhf9kr5fjs661.jpg" class={profilestyles.user}></img>
+                        </div>
                     </main>
                 </div>
                 <div className={profilestyles.card2}>

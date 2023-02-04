@@ -45,7 +45,7 @@
     flex-basis: 5%;
     padding: 0.5rem;
     padding-right: 10%;
-    padding-bottom: 5%;
+    padding-bottom: 2.5%;
     text-align: left;
     align-self: left;
     color: inherit;
@@ -129,16 +129,29 @@
 
   .user {
     display: inline-block;
-    width: 10%;
+    width: 45%;
     height: 21.5%;
-    left: 22.5%;
-    top: 13.8%;
+    /* left: 22.5%;
+    top: 13.8%; */
+    margin-left: 85%;
+    margin-top: -30%;
     border-radius: 50%;
     /* background-color: #808080; */
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    position:absolute;
+    /* position:absolute; */
+  }
+
+  .profileimage{
+    width: 20%;
+    margin-top: 10%;
+    margin-left: 15%;
+    height: 10%;
+    float: left;
+    border-radius: 50%; /*don't forget prefixes*/
+    background-position: center center;
+    background-size: cover;
   }
 
   .user:hover {
