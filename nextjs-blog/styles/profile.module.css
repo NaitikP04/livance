@@ -40,8 +40,8 @@
   .card {
     margin-top: 2.2%;
     margin-bottom: 1.2%;
-    width: 20em;
-    margin-left: 3.5rem;
+    width: 21.5%;
+    margin-left: 3.5%;
     flex-basis: 5%;
     padding: 0.5rem;
     padding-right: 10%;
@@ -58,9 +58,9 @@
 
   .card2 {
     margin-bottom: 1.2%;
-    height: 7.5em;
-    margin-left: 3.5rem;
-    width: 20em;
+    height: 100%;
+    margin-left: 3.5%;
+    width: 21.5%;
     flex-basis: 5%;
     padding: 0.5rem;
     padding-right: 10%;
@@ -76,9 +76,9 @@
   }
 
   .card3 {
-    height: 5em;
-    margin-left: 3.5rem;
-    width: 20em;
+    height: 100%;
+    margin-left: 3.5%;
+    width: 21.5%;
     flex-basis: 5%;
     padding: 0.5rem;
     padding-right: 10%;
@@ -112,7 +112,7 @@
   } */
 
   .sidebarright {
-    width: 50em;
+    width: 53%;
     margin-top: 5%;
     margin-right: 4.75%;
     align-self: right;
@@ -129,8 +129,8 @@
 
   .user {
     display: inline-block;
-    width: 150px;
-    height: 150px;
+    width: 10%;
+    height: 21.5%;
     left: 22.5%;
     top: 13.8%;
     border-radius: 50%;
