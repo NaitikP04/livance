@@ -12,22 +12,43 @@ export default function Home() {
         <title>Livance</title>
         <meta name="description" content="Livance Family and Friends Health App" />
       </head>
-      <nav>
       <img src="/logonew.png" alt="Livance Logo" className={styles.logo}/> 
       <div className={styles.navbar}>
         <Link className={styles.active} href="/">Home</Link>
         <Link href="#">About</Link>
         <Link href="#">User Listing</Link>
-      </div>
-      </nav>
+      </div>     
       <body>
-        <main>
-          <h1 className={styles.title}>
-            Go to <Link href="/users/first-post">Page!</Link>
-          </h1>
-        </main>
+          <div className={styles.sidebarleft}>
+            <div className={styles.card}>
+              <img src="/profile.png" alt="Profile 1" className={styles.profileimage}/>
+              <h2>Profile 1</h2>
+              <p>my status</p>
+            </div>
+            <div className={styles.card}>
+            <img src="/profile.png" alt="Profile 1" className={styles.profileimage}/>
+              <h2>Profile 2</h2>
+              <p>my status</p>
+            </div>
+            <div className={styles.card}>
+            <img src="/profile.png" alt="Profile 1" className={styles.profileimage}/>
+              <h2>Profile 3</h2>
+              <p>my status</p>
+            </div>
+            <div className={styles.card}>
+            <img src="/profile.png" alt="Profile 1" className={styles.profileimage}/>
+              <h2>Profile 4</h2>
+              <p>my status</p>
+            </div>
+          </div>
+
+          <div className={styles.sidebarright}>
+            <div className={styles.card2}>
+              <h2>What's on your mind?</h2>
+            </div>
+          </div>
       </body>
-        
+
 
       <style jsx>{`
         main {
@@ -80,6 +101,7 @@ export default function Home() {
         }
       `}</style>
     </div>
+
   )
 }
 

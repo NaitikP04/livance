@@ -64,11 +64,26 @@
   margin-top: 3rem;
 }
 
+.profileimage{
+  width: 20%;
+  margin-top: 10%;
+  margin-left: 15%;
+  height: 10%;
+  float: left;
+  border-radius: 50%; /*don't forget prefixes*/
+  background-image: "/profile.png";
+  background-position: center center;
+  background-size: cover;
+}
+
 .card {
   margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
+  flex-basis: 5%;
+  padding: 0.5rem;
+  padding-right: 10%;
+  padding-bottom: 5%;
+  text-align: right;
+  align-self: left;
   color: inherit;
   text-decoration: none;
   border: 1px solid #eaeaea;
@@ -79,8 +94,48 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #3c91ca;
+  border-color: #3c91ca;
+}
+
+.card2 {
+  margin: 1rem;
+  min-height: 95%;
+  padding-top: 25%;
+  text-align: center;
+  align-self: center;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #313131;
+  border-radius: 10px;
+}
+
+.card2 h2:hover{
+  color: #3c91ca;
+  border-color: #3c91ca;
+}
+
+.sidebarleft {
+  width: 20em;
+  margin-top: 4%;
+  margin-left: 1%;
+  height: relative;
+  background-color: #e0e0e0dc;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.sidebarright {
+  width: 60%;
+  margin-top: 4%;
+  margin-left: 90%;
+  margin-right: 20%;
+  height: 80vh;
+  background-color: #e0e0e0dc;
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
 
 .card h3 {
@@ -88,10 +143,15 @@
   font-size: 1.5rem;
 }
 
+.card h2 {
+  font-size: 1.5rem;
+  color: #000000;
+}
+
 .card p {
   margin: 0;
   font-size: 1.25rem;
-  line-height: 1.5;
+  line-height: 0.5;
 }
 
 .logo {
@@ -102,7 +162,7 @@
 }
 
 .navbar {
-  width: fill;
+  width: stretch;
   background-color: #5c5b5b;
   overflow: auto;
   position: absolute;
