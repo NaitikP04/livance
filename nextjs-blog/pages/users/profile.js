@@ -6,29 +6,46 @@ import profilestyles from '../../styles/profile.module.css';
 export default function Profile() {
     return (
         <div>
-            <main>
-                <h1 className={profilestyles.title}>
-                Go to <Link href="/">Home Page!</Link>
-                </h1>
-            </main>
-            <Head>
-                <title>Profile</title>
-            </Head>
-            <div className={profilestyles.card}>
-                <main>
-                    <h1>
-                        Eric Phuong
-                    </h1>
-                    <p className={profilestyles.title2}>Family/Friend</p>
-                </main>
+            <img src="/logonew.png" alt="Livance Logo" className={styles.logo}/>
+            <div className={styles.navbar}>
+                <Link className={styles.active} href="/">Home</Link>
+                <Link href="#">About</Link>
+                <Link href="#">User Listing</Link>
             </div>
-            <div className={profilestyles.status}>
+            <body>
                 <main>
-                    <h1>
-                        statuses
+                    <h1 className={profilestyles.title}>
+                    Go to <Link href="/">Home Page!</Link>
                     </h1>
                 </main>
-            </div>
+                <Head>
+                    <title>Profile</title>
+                </Head>
+                {/* <div className={profilestyles.user}></div> */}
+                <img src="https://i.redd.it/zhf9kr5fjs661.jpg" class={profilestyles.user}></img>
+                <div className={profilestyles.card}>
+                    <main>
+                        <h1>
+                            Name
+                        </h1>
+                        <p className={profilestyles.title2}>Family or Friend</p>
+                    </main>
+                </div>
+                <div className={profilestyles.card2}>
+                    <main>
+                        <h1>
+                            Current Health Status
+                        </h1>
+                    </main>
+                </div>
+                <div className={profilestyles.sidebarright}>
+                    <main>
+                        <h1>
+                            Health History
+                        </h1>
+                    </main>
+                </div>
+            </body>
         </div>
     )
 }
