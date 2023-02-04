@@ -42,9 +42,21 @@ export default function Home() {
             </div>
           </div>
 
-          <div className={styles.sidebarright}>
+          <div className={styles.sidebarmiddle}>
             <div className={styles.card2}>
               <h2>What's on your mind?</h2>
+            </div>
+          </div>
+
+          <div className={styles.sidebarright}>
+            <div className={styles.card2}>
+              <h2>Resources</h2>
+              <div className={styles.card3}>
+              <h2>Link to mental health website?</h2>
+            </div>
+            <div className={styles.card3}>
+              <h2>Link to gym website?</h2>
+            </div>
             </div>
           </div>
       </body>
