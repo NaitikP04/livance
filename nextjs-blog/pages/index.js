@@ -1,31 +1,33 @@
 import Head from 'next/head';
+import {Fragment} from 'react';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
+import Image from 'next/image';
+import Layout  from '../components/layout';
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <h1 className={styles.title}>
-          Go to <Link href="/posts/first-post">Page!</Link>
-        </h1>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer>
+      <head>
+        <title>Livance</title>
+        <meta name="description" content="Livance Family and Friends Health App" />
+      </head>
+      <nav>
+      <img src="/logonew.png" alt="Livance Logo" className={styles.logo}/> 
+      <div className={styles.navbar}>
+        <Link className={styles.active} href="/">Home</Link>
+        <Link href="#">About</Link>
+        <Link href="#">User Listing</Link>
+      </div>
+      </nav>
+      <body>
+        <main>
+          <h1 className={styles.title}>
+            Go to <Link href="/users/first-post">Page!</Link>
+          </h1>
+        </main>
+      </body>
+        
 
       <style jsx>{`
         main {
@@ -80,3 +82,4 @@ export default function Home() {
     </div>
   )
 }
+
