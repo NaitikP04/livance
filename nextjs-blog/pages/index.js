@@ -8,23 +8,25 @@ import Layout  from '../components/layout';
 export default function Home() {
   return (
     <div className={styles.container}>
-      <head>
+      <div>
         <title>Livance</title>
         <meta name="description" content="Livance Family and Friends Health App" />
-      </head>
+      </div>
       <img src="/logonew.png" alt="Livance Logo" className={styles.logo}/> 
       <div className={styles.navbar}>
         <Link className={styles.active} href="/">Home</Link>
         <Link href="#">About</Link>
-        <Link href="#">User Listing</Link>
+        <Link href="/users/profile">User Listing</Link>
       </div>     
-      <body>
+      <div>
           <div className={styles.sidebarleft}>
+            <Link href="/users/profile">
             <div className={styles.card}>
               <img src="/profile.png" alt="Profile 1" className={styles.profileimage}/>
               <h2>Profile 1</h2>
               <p>my status</p>
             </div>
+            </Link>
             <div className={styles.card}>
             <img src="/profile.png" alt="Profile 1" className={styles.profileimage}/>
               <h2>Profile 2</h2>
@@ -44,7 +46,7 @@ export default function Home() {
 
           <div className={styles.sidebarmiddle}>
             <div className={styles.card2}>
-              <h2>What's on your mind?</h2>
+              <textarea className={styles.textarea}  placeholder="What's on your mind?" rows="6" cols="50"></textarea>
             </div>
           </div>
 
@@ -59,7 +61,7 @@ export default function Home() {
             </div>
             </div>
           </div>
-      </body>
+      </div>
 
 
       <style jsx>{`
@@ -97,6 +99,7 @@ export default function Home() {
           font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
             DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
         }
+
       `}</style>
 
       <style jsx global>{`
