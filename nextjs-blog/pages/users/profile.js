@@ -12,7 +12,7 @@ export default function Profile() {
                 <Link href="#">About</Link>
                 <Link href="#">User Listing</Link>
             </div>
-            <body>
+            <div>
                 <main>
                     <h1 className={profilestyles.title}>
                     Go to <Link href="/">Home Page!</Link>
@@ -29,7 +29,7 @@ export default function Profile() {
                         </h1>
                         <p className={profilestyles.title2}>Family or Friend</p>
                         <div>
-                            <img src="https://i.redd.it/zhf9kr5fjs661.jpg" class={profilestyles.user}></img>
+                            <img src="https://i.redd.it/zhf9kr5fjs661.jpg" className={profilestyles.user}></img>
                         </div>
                     </main>
                 </div>
@@ -54,7 +54,7 @@ export default function Profile() {
                         </h1>
                     </main>
                 </div>
-            </body>
+            </div>
         </div>
     )
 }
