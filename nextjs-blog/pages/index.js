@@ -5,7 +5,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Layout  from '../components/layout';
 
-export default function Home() {
+export default function Home(props) {
+  const users = props.users
   return (
     <div className={styles.container}>
       <div>
@@ -20,30 +21,16 @@ export default function Home() {
       </div>     
       <div>
           <div className={styles.sidebarleft}>
-            <Link href="/users/profile">
-            <div className={styles.card}>
-              <img src="/profile.png" alt="Profile 1" className={styles.profileimage}/>
-              <h2>Profile 1</h2>
-              <p>my status</p>
-            </div>
-            </Link>
-            <div className={styles.card}>
-            <img src="/profile.png" alt="Profile 1" className={styles.profileimage}/>
-              <h2>Profile 2</h2>
-              <p>my status</p>
-            </div>
-            <div className={styles.card}>
-            <img src="/profile.png" alt="Profile 1" className={styles.profileimage}/>
-              <h2>Profile 3</h2>
-              <p>my status</p>
-            </div>
-            <div className={styles.card}>
-            <img src="/profile.png" alt="Profile 1" className={styles.profileimage}/>
-              <h2>Profile 4</h2>
-              <p>my status</p>
-            </div>
+            {users.map(user => (
+              <Link href={"/users/" + user.id}>
+              <div className={styles.card}>
+                <img src="/profile.png" alt={user.name} className={styles.profileimage}/>
+                <h2>{user.name}</h2>
+                <p>{user.status}</p>
+              </div>
+              </Link>
+            ))}
           </div>
-
           <div className={styles.sidebarmiddle}>
             <div className={styles.card2}>
               <textarea className={styles.textarea}  placeholder="What's on your mind?" rows="6" cols="50"></textarea>
@@ -120,3 +107,15 @@ export default function Home() {
   )
 }
 
+// Fetching data from the JSON file
+import fsPromises from 'fs/promises';
+import path from 'path'
+export async function getStaticProps() {
+  const filePath = path.join(process.cwd(), 'data.json');
+  const jsonData = await fsPromises.readFile(filePath);
+  const objectData = JSON.parse(jsonData);
+
+  return {
+    props: objectData
+  }
+}
