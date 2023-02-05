@@ -6,15 +6,16 @@ import { useRouter } from 'next/router'
 
 export default function Profile(props) {
     const router = useRouter()
-    const {id} = router.query
+    const {id} = router.query;
+    const {object} = router.query;
     const user = props.users[id];
+    user.status = object
     return (
         <div className={profilestyles.container}>
             <img src="/logonew.png" alt="Livance Logo" className={styles.logo}/>
             <div className={styles.navbar}>
                 <Link className={styles.active} href="/">Home</Link>
-                <Link href="#">About</Link>
-                <Link href="/users/1">My Profile</Link>
+                <Link href="/users/0">My Profile</Link>
             </div>
             <div>
                 {/* <main>
@@ -31,7 +32,7 @@ export default function Profile(props) {
                         <h1>
                             {user.name}
                         </h1>
-                        <p className={profilestyles.title2}>Family or Friend</p>
+                        <p className={profilestyles.title2}>Friend</p>
                         <div>
                             <img src={user.profilePic} className={profilestyles.user}></img>
                         </div>
@@ -42,7 +43,7 @@ export default function Profile(props) {
                         <h1>
                             Status
                         </h1>
-                        <h3>{user.mainStatus}</h3>
+                        <h3>{user.status}</h3>
                     </main>
                 </div>
                 <div className={profilestyles.card3}>

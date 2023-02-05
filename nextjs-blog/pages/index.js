@@ -7,13 +7,14 @@ import Layout  from '../components/layout';
 import {useState} from 'react';
 
 
-export default function Home(props) {
+export default function Home(props) { // submit bottom
   const users = props.users
   const [message, setMessage] = useState('');
-  const handleMessageChange = event => {
+    const handleMessageChange = async event => {
     setMessage(event.target.value);
     console.log(event.target.value);
-    document.getElementById("status0").innerHTML = event.target.value;
+    users[0].status = event.target.value
+    
   };
   return (
     <div className={styles.container}>
@@ -24,19 +25,19 @@ export default function Home(props) {
       <img src="/logonew.png" alt="Livance Logo" className={styles.logo}/> 
       <div className={styles.navbar}>
         <Link className={styles.active} href="/">Home</Link>
-        <Link href="#">About</Link>
-        <Link href="/users/0">My Profile</Link>
+        
+        <Link href={{ pathname: '/users/0', query: { object: users[0].status} }}>My Profile</Link>
       </div>     
       <div>
           <div className={styles.sidebarleft}>
             {users.map(user => (
-              <Link href={"/users/" + user.id}>
+              <Link href={{ pathname: `/users/${user.id}`, query: { object: users[user.id].status } }}>
               <div className={styles.card}>
                 <img src={user.profilePic} alt={user.name} className={styles.profileimage}/>
                 <h2>{user.name}</h2>
                 <p id={`status${user.id}`}>
-                  {user.sideStatus.length > 20
-                   ? user.sideStatus.substr(0,15) + "..." : user.sideStatus}
+                  {user.status.length > 20
+                   ? user.status.substr(0,15) + "..." : user.status}
                 </p>
               </div>
               </Link>
@@ -52,12 +53,22 @@ export default function Home(props) {
             <div className={styles.card2}>
               <h2>Resources</h2>
               <div className={styles.card3}>
-              <h2>Link to mental health website?</h2>
+              <Link href="https://recreation.ucsc.edu/facilities/index.html">
+              <h2>Fitness Resources</h2>
+              </Link>
             </div>
+            <Link href="https://caps.ucsc.edu/">
             <div className={styles.card3}>
-              <h2>Link to gym website?</h2>
+              <h2>Counseling and Psychological Services</h2>
             </div>
+            </Link>
+            <Link href="https://healthcenter.ucsc.edu/">
+            <div className={styles.card3}>
+              <h2>Health Services</h2>
             </div>
+            </Link>
+            </div>
+            
           </div>
       </div>
 
