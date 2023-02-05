@@ -25,7 +25,7 @@ export default function Home(props) {
       <div className={styles.navbar}>
         <Link className={styles.active} href="/">Home</Link>
         <Link href="#">About</Link>
-        <Link href="/users/profile">User Listing</Link>
+        <Link href="/users/1">My Profile</Link>
       </div>     
       <div>
           <div className={styles.sidebarleft}>
