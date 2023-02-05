@@ -40,6 +40,7 @@
     /* border: 1px solid #131313; */
     border-radius: 35px;
     /* transition: color 0.15s ease, border-color 0.15s ease; */
+    box-shadow: 6px 8px 4px 4px lightblue;
   }
 
   /* .card2 {
@@ -75,6 +76,7 @@
     border-radius: 35px;
     border: 1px solid #2e5984;
     transition: color 0.15s ease, border-color 0.15s ease;
+    /* box-shadow: 6px 8px 4px 4px lightblue; */
   }
 
   .card3 {
@@ -89,11 +91,20 @@
     align-self: left;
     color: inherit;
     text-decoration: none;
-    background-color: #e0e0e0dc;
-    border: 1px solid #131313;
+    /* background-color: #e0e0e0dc; */
+    border: 2.5px solid #ededed;
     border-radius: 10px;
     transition: color 0.15s ease, border-color 0.15s ease;
+    box-shadow: 6px 8px 4px 4px lightblue;
   }
+
+  /* .waves {
+    height: 80%;
+    margin-top: -12%;
+    margin-left: -5%;
+    opacity: 1;
+    position: absolute;
+  } */
 
   .sidebarright {
     width: 53%;
@@ -101,13 +112,13 @@
     margin-right: 4.75%;
     align-self: right;
     text-align: center;
-    height: 80vh;
-    background-color: #e0e0e0dc;
+    height: 85vh;
+    background-color: #b8e2f2;
     position: absolute;
     top: 0px;
     right: 0px;
-    border-radius: 10px;
-    border: 1px solid #131313;
+    border-radius: 35px;
+    border: 2px solid #528aae;
     transition: color 0.15s ease, border-color 0.15s ease;
   }
 
@@ -152,8 +163,8 @@
   }
 
   .transimg {
-    margin-left: 29.3%;
-    margin-top: -7%;
+    margin-left: 29.6%;
+    margin-top: -6.8%;
     height: 20%;
     opacity: .3;
     position: absolute;
@@ -191,6 +202,7 @@
   }
 
   .card2 h2 {
+    color: white;
     font-family: "Roboto", sans-serif;
   }
 
@@ -221,6 +233,7 @@
   }
 
   .sidebarright h1 {
+    color: #2e5984;
     font-family: "Roboto", sans-serif;
   }
 
