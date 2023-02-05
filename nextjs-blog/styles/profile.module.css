@@ -91,10 +91,9 @@
 
   .user {
     display: inline-block;
-    width: 45%;
-    height: 21.5%;
-    /* left: 22.5%;
-    top: 13.8%; */
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
     margin-left: 85%;
     margin-top: -30%;
     border-radius: 50%;
@@ -144,12 +143,63 @@
     font-family: "Roboto", sans-serif;
   }
 
+  .card h2 {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .card h3 {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .card h4 {
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .card2 h1 {
+    font-family: "Roboto", sans-serif;
+  }
+
   .card2 h2 {
-    
+    font-family: "Roboto", sans-serif;
+  }
+
+  .card2 h3 {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .card2 h4 {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .card3 h1 {
     font-family: "Roboto", sans-serif;
   }
 
   .card3 h2 {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .card3 h3 {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .card3 h4 {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .sidebarright h1 {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .sidebarright h2 {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .sidebarright h3 {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .sidebarright h4 {
     font-family: "Roboto", sans-serif;
   }
   
