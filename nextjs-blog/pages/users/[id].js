@@ -6,29 +6,50 @@ import { useRouter } from 'next/router'
 import Image from 'next/image';
 
 let history = ["Sleep deprived"]
+let image_history = [""]
 
 export default function Profile(props) {
     const router = useRouter()
     const {id} = router.query;
     const {object} = router.query;
+    let status = object
+    let link = ""
+    try {
+        let parts = object.split("   +++   ");
+        status = parts[0]
+        link = parts[1]
+      } catch (error) {
+        console.log("The separator was not found in the string");
+      }
+    
     const user = props.users[id];
-    if (id == 0 && object) {
-        if (object != history[0]) {
+    if (id == 0 && status) {
+        if (status != history[0]) {
             for (let i = history.length; i > 0; i--) {
                 history[i] = history[i-1]
-                console.log(i)
             }
-            history[0] = object
+            history[0] = status
+            for (let i = image_history.length; i > 0; i--) {
+                image_history[i] = image_history[i-1]
+            }
+            if (link) {
+                image_history[0] = link
+            }
+            else {
+                image_history[0] = ""
+            }
         }
         user.history = history
-        user.status = object
+        user.status = status
     }
+    console.log(image_history)
+    console.log("wow")
     return (
         <div className={profilestyles.container}>
             <img src="/logonew.png" alt="Livance Logo" className={styles.logo}/>
             <div className={styles.navbar}>
-                <Link className={styles.active} href={{ pathname: "/", query: { object } }}>Home</Link>
-                <Link href={{ pathname: "/users/0", query: { object: object } }}>My Profile</Link>
+                <Link className={styles.active} href={{ pathname: "/", query: { object: status } }}>Home</Link>
+                <Link href={{ pathname: "/users/0", query: { object: status } }}>My Profile</Link>
             </div>
             <div>
                 <Head>
@@ -63,14 +84,29 @@ export default function Profile(props) {
                     </main>
                 </div>
                 <div className={profilestyles.sidebarright}>
-                    <main>
-                        <h1>
-                            Health Status History:
-                        </h1>
+                <main>
+                    <h1>Health Status History:</h1>
+                    <div style={{display: "flex"}}>
+                        <div style={{width: "50%"}}>
                         {user.history.map(hist => (
-                            <h3>{hist}</h3>
+                            <div>
+                            <h3>{`${hist}`}</h3>
+                            </div>
                         ))}
-                    </main>
+                        </div>
+                        <div style={{width: "50%", display: "flex", flexDirection: "column"}}>
+                        {image_history.map(hist => (
+                            <img
+                            className={profilestyles.image}
+                            id={`${hist}`}
+                            src={hist}
+                            onerror='this.style.display = "none"'
+                            width="200"
+                            />
+                        ))}
+                        </div>
+                    </div>
+                </main>
                 </div>
             </div>
         </div>

@@ -11,16 +11,35 @@ export default function Home(props) { // submit bottom
   const users = props.users
   const router = useRouter()
   const [message, setMessage] = useState('');
+
+  const [showPopup, setShowPopup] = useState(false);
+  const [link, setLink] = useState('');
+
+  const handleLink = (event) => {
+    setLink(event.target.value);
+  };
+
+  const handleUploadClick = () => {
+    setShowPopup(true);
+  };
+
+  const handlePopupClose = () => {
+    setShowPopup(false);
+  };
+
+  const handlePopupSubmit = () => {
+    // handle the uploaded link
+    console.log(link);
+    setShowPopup(false);
+    users[0].status = document.getElementById("txt").value
+  };
+
   if (users[0].status == "Sleep deprived") {
     let {object} = router.query
     if (object) {
       users[0].status = object
     }
   }
-  const handleMessageChange = async event => {
-    setMessage(event.target.value);
-    users[0].status = event.target.value
-  };
 
   return (
     <div className={styles.container}>
@@ -32,12 +51,12 @@ export default function Home(props) { // submit bottom
       <div className={styles.navbar}>
         <Link className={styles.active} href="/">Home</Link>
         
-        <Link href={{ pathname: '/users/0', query: { object: users[0].status}} } >My Profile</Link>
+        <Link href={{ pathname: '/users/0', query: { object: `${users[0].status}   +++   ${link}`}} } >My Profile</Link>
       </div>     
       <div>
           <div className={styles.sidebarleft}>
             {users.map(user => (
-              <Link href={{ pathname: `/users/${user.id}`, query: { object: users[0].status } }} style={{textDecoration: 'none'}}>
+              <Link href={{ pathname: `/users/${user.id}`, query: { object: `${users[0].status}   +++   ${link}` } }} style={{textDecoration: 'none'}}>
               <div className={styles.card}>
                 <img src={user.profilePic} alt={user.name} className={styles.profileimage}/>
                 <h2>{user.name}</h2>
@@ -51,10 +70,19 @@ export default function Home(props) { // submit bottom
           </div>
           <div className={styles.sidebarmiddle}>
             <div className={styles.card2}>
-              <textarea id="txt" className={styles.textarea}  placeholder="How are you feeling?" rows="6" cols="50" onChange={handleMessageChange}></textarea>
+              <textarea id="txt" className={styles.textarea}  placeholder="How are you feeling?" rows="6" cols="50"></textarea>
               <div className={styles.card4}>
-                <button className={styles.button} onClick={() => {} }><img src="/uploadicon2.png"></img></button>    
-              </div>  
+                <button className={styles.button} onClick={handleUploadClick}><img src="/uploadicon.png"></img></button>       
+              </div>
+                { showPopup && (
+                  <div className="popup">
+                    <div className="popup-inner">
+                      <input className={styles.button} type="text" placeholder="Enter link" onChange={handleLink} />
+                      <button className={styles.button} onClick={handlePopupSubmit}>Submit</button>
+                      <button className={styles.button} onClick={handlePopupClose}>Close</button>
+                    </div>
+                  </div>
+                )}  
             </div>     
           </div>
 
