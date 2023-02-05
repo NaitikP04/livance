@@ -39,6 +39,7 @@ export default function Profile(props) {
                 image_history[0] = ""
             }
         }
+        user.image_history = image_history
         user.history = history
         user.status = status
     }
@@ -95,7 +96,7 @@ export default function Profile(props) {
                         ))}
                         </div>
                         <div style={{width: "50%", display: "flex", flexDirection: "column"}}>
-                        {image_history.map(hist => (
+                        {user.image_history.map(hist => (
                             <img
                             className={profilestyles.image}
                             id={`${hist}`}
