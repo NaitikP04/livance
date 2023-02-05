@@ -42,14 +42,14 @@ export default function Profile(props) {
                         <h1>
                             Status
                         </h1>
-                        <h2>{user.status}</h2>
+                        <h3>{user.mainStatus}</h3>
                     </main>
                 </div>
                 <div className={profilestyles.card3}>
                     <main>
-                        <h3>
+                        <h1>
                             About
-                        </h3>
+                        </h1>
                         <h4>{user.about}</h4>
                     </main>
                 </div>

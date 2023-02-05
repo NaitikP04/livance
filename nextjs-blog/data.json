@@ -2,24 +2,27 @@
     "users": [
         {
             "id": 0,
-            "name": "Ryan Miller",
-            "status": "Slept in today",
-            "about": "this is an about thingy",
-            "history": "this is health history",
-            "profilePic": "https://i.redd.it/zhf9kr5fjs661.jpg"
-        },
-        {
-            "id": 1,
             "name": "Naitik Poddar",
-            "status": "Naitik status",
-            "about": "this is an about thingy",
+            "sideStatus": "Sleep deprived",
+            "mainStatus": "Sleep deprived",
+            "about": "Second year CSGD student at the University of California, Santa Cruz. Tries to be healthy, but fails.",
             "history": "this is health history",
             "profilePic": "https://cdn.discordapp.com/attachments/1071312850271875072/1071585963257643078/IMG_3558.jpg"
         },
         {
+            "id": 1,
+            "name": "Ryan Miller",
+            "sideStatus": "Slept in today",
+            "mainStatus": "Slept in today",
+            "about": "this is an about thingy",
+            "history": "this is health history",
+            "profilePic": "https://cdn.discordapp.com/attachments/1071312850271875072/1071603744673906789/IMG_3560.jpg"
+        },
+        {
             "id": 2,
             "name": "Eric Phuong",
-            "status": "Eric status",
+            "sideStatus": "Caught a cold and ptsd kekw aint no way lil bros=",
+            "mainStatus": "Caught a cold",
             "about": "this is an about thingy",
             "history": "this is health history",
             "profilePic": "https://cdn.discordapp.com/attachments/1071312850271875072/1071575083832852530/9587850A-0AAA-447B-BFF1-D572B6C13EBE.JPG"
@@ -27,15 +30,8 @@
         {
             "id": 3,
             "name": "Kirk Perez",
-            "status": "Kirk status",
-            "about": "this is an about thingy",
-            "history": "this is health history",
-            "profilePic": "https://i.redd.it/zhf9kr5fjs661.jpg"
-        },
-        {
-            "id": 3,
-            "name": "another person",
-            "status": "person status",
+            "sideStatus": "person status",
+            "mainStatus": "person status",
             "about": "this is an about thingy",
             "history": "this is health history",
             "profilePic": "https://i.redd.it/zhf9kr5fjs661.jpg"

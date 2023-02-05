@@ -25,7 +25,7 @@ export default function Home(props) {
       <div className={styles.navbar}>
         <Link className={styles.active} href="/">Home</Link>
         <Link href="#">About</Link>
-        <Link href="/users/1">My Profile</Link>
+        <Link href="/users/0">My Profile</Link>
       </div>     
       <div>
           <div className={styles.sidebarleft}>
@@ -34,7 +34,10 @@ export default function Home(props) {
               <div className={styles.card}>
                 <img src={user.profilePic} alt={user.name} className={styles.profileimage}/>
                 <h2>{user.name}</h2>
-                <p id={`status${user.id}`}>{user.status}</p>
+                <p id={`status${user.id}`}>
+                  {user.sideStatus.length > 20
+                   ? user.sideStatus.substr(0,15) + "..." : user.sideStatus}
+                </p>
               </div>
               </Link>
             ))}
