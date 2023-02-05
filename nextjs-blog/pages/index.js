@@ -4,9 +4,17 @@ import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import Layout  from '../components/layout';
+import {useState} from 'react';
+
 
 export default function Home(props) {
   const users = props.users
+  const [message, setMessage] = useState('');
+  const handleMessageChange = event => {
+    setMessage(event.target.value);
+    console.log(event.target.value);
+    document.getElementById("status0").innerHTML = event.target.value;
+  };
   return (
     <div className={styles.container}>
       <div>
@@ -24,16 +32,16 @@ export default function Home(props) {
             {users.map(user => (
               <Link href={"/users/" + user.id}>
               <div className={styles.card}>
-                <img src="/profile.png" alt={user.name} className={styles.profileimage}/>
+                <img src={user.profilePic} alt={user.name} className={styles.profileimage}/>
                 <h2>{user.name}</h2>
-                <p>{user.status}</p>
+                <p id={`status${user.id}`}>{user.status}</p>
               </div>
               </Link>
             ))}
           </div>
           <div className={styles.sidebarmiddle}>
             <div className={styles.card2}>
-              <textarea className={styles.textarea}  placeholder="What's on your mind?" rows="15" cols="50"></textarea>
+              <textarea id="txt" className={styles.textarea}  placeholder="What's on your mind?" rows="6" cols="50" onChange={handleMessageChange}></textarea>
             </div>
           </div>
 
@@ -103,7 +111,6 @@ export default function Home(props) {
         }
       `}</style>
     </div>
-
   )
 }
 
