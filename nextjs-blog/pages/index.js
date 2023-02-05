@@ -46,7 +46,10 @@ export default function Home(props) { // submit bottom
           <div className={styles.sidebarmiddle}>
             <div className={styles.card2}>
               <textarea id="txt" className={styles.textarea}  placeholder="What's on your mind?" rows="6" cols="50" onChange={handleMessageChange}></textarea>
-            </div>
+              <div className={styles.card4}>
+                <button className={styles.button} onClick={() => {} }><img src="/uploadicon.png"></img></button>    
+              </div>  
+            </div>     
           </div>
 
           <div className={styles.sidebarright}>
