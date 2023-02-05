@@ -230,7 +230,7 @@
 }
 
 .button {
-  width: 35%;
+  width: 30%;
   margin-top: -15%;
   background-color: #3c91ca;
   border: none;
@@ -243,6 +243,8 @@
   cursor: pointer;
   border-radius: 10px; 
 }
+
+
 
 .card p {
   margin: 0;

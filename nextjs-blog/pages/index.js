@@ -72,7 +72,7 @@ export default function Home(props) { // submit bottom
             <div className={styles.card2}>
               <textarea id="txt" className={styles.textarea}  placeholder="How are you feeling?" rows="6" cols="50"></textarea>
               <div className={styles.card4}>
-                <button className={styles.button} onClick={handleUploadClick}><img src="/uploadicon.png"></img></button>       
+                <button className={styles.button} onClick={handleUploadClick}><img src="/uploadicon2.png"></img></button>       
               </div>
                 { showPopup && (
                   <div className="popup">
