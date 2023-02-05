@@ -39,7 +39,7 @@ export default function Profile(props) {
                         <h1>
                             {user.name}
                         </h1>
-                        <p className={profilestyles.title2}>he/him</p>
+                        <p className={profilestyles.title2}>{user.pronouns}</p>
                         <div>
                             <img src={user.profilePic} className={profilestyles.user}></img>
                         </div>

@@ -3,6 +3,7 @@
         {
             "id": 0,
             "name": "Naitik Poddar",
+            "pronouns": "he/him",
             "status": "Sleep deprived",
             "about": "Second year CSGD student at the University of California, Santa Cruz. Tries to be healthy, but fails.",
             "history": ["Sleep deprived"],
@@ -11,6 +12,7 @@
         {
             "id": 1,
             "name": "Ryan Miller",
+            "pronouns": "he/him",
             "status": "Slept in today",
             "about": "Surely I am healthy, because I am not dead",
             "history": ["Slept in today", "Feeling energized after a morning workout 💪 Staying healthy doesn't have to be a chore, find something you enjoy and make it a routine 🏃‍♀️ #healthylifestyle #fitnessgoals",
@@ -23,6 +25,7 @@
         {
             "id": 2,
             "name": "Eric Phuong",
+            "pronouns": "he/him",
             "status": "Feeling good today",
             "about": "I've been looking to go to the gym more often to improve my physical health.",
             "history": ["Feeling good today", "Trying out a new yoga class tonight 🧘‍♀️ Mixing up my exercise routine keeps things interesting and challenges my body in new ways 💪 #yoga #fitnessfun",
@@ -35,6 +38,7 @@
         {
             "id": 3,
             "name": "Sammy the Slug",
+            "pronouns": "They/Them",
             "status": "Slugging around",
             "about": "Don't put salt on me.",
             "history": ["Slugging around", "Slithering around the beautiful UC Santa Cruz campus 🐌 Keeping active and enjoying the great outdoors is one of the best ways to stay healthy 🌲 #SammyTheSlug #UCSCHealthyLiving",
