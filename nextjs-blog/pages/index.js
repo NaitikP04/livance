@@ -32,12 +32,12 @@ export default function Home(props) { // submit bottom
       <div className={styles.navbar}>
         <Link className={styles.active} href="/">Home</Link>
         
-        <Link href={{ pathname: '/users/0', query: { object: users[0].status} }}>My Profile</Link>
+        <Link href={{ pathname: '/users/0', query: { object: users[0].status}} } >My Profile</Link>
       </div>     
       <div>
           <div className={styles.sidebarleft}>
             {users.map(user => (
-              <Link href={{ pathname: `/users/${user.id}`, query: { object: users[0].status } }}>
+              <Link href={{ pathname: `/users/${user.id}`, query: { object: users[0].status } }} style={{textDecoration: 'none'}}>
               <div className={styles.card}>
                 <img src={user.profilePic} alt={user.name} className={styles.profileimage}/>
                 <h2>{user.name}</h2>
@@ -51,7 +51,7 @@ export default function Home(props) { // submit bottom
           </div>
           <div className={styles.sidebarmiddle}>
             <div className={styles.card2}>
-              <textarea id="txt" className={styles.textarea}  placeholder="What's on your mind?" rows="6" cols="50" onChange={handleMessageChange}></textarea>
+              <textarea id="txt" className={styles.textarea}  placeholder="How are you feeling?" rows="6" cols="50" onChange={handleMessageChange}></textarea>
               <div className={styles.card4}>
                 <button className={styles.button} onClick={() => {} }><img src="/uploadicon.png"></img></button>    
               </div>  
@@ -62,16 +62,16 @@ export default function Home(props) { // submit bottom
             <div className={styles.card2}>
               <h2>Resources</h2>
               <div className={styles.card3}>
-              <Link href="https://recreation.ucsc.edu/facilities/index.html">
+              <Link href="https://recreation.ucsc.edu/facilities/index.html" style={{textDecoration: 'none'}}>
               <h2>Fitness Resources</h2>
               </Link>
             </div>
-            <Link href="https://caps.ucsc.edu/">
+            <Link href="https://caps.ucsc.edu/" style={{textDecoration: 'none'}}>
             <div className={styles.card3}>
               <h2>Counseling and Psychological Services</h2>
             </div>
             </Link>
-            <Link href="https://healthcenter.ucsc.edu/">
+            <Link href="https://healthcenter.ucsc.edu/" style={{textDecoration: 'none'}}>
             <div className={styles.card3}>
               <h2>Health Services</h2>
             </div>
