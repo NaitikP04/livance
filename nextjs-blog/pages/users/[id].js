@@ -48,16 +48,16 @@ export default function Profile(props) {
                 <img src="/mental-health.png" alt="Livance Logo" className={profilestyles.transimg}/>
                 <div className={profilestyles.card2}>
                     <main>
-                        <h1>
-                            Current Status:
-                        </h1>
+                        <h2>
+                            Current Health Status:
+                        </h2>
                         <h4>{user.status}</h4>
                     </main>
                 </div>
                 <div className={profilestyles.card3}>
                     <main>
                         <h1>
-                            About
+                            About:
                         </h1>
                         <h4>{user.about}</h4>
                     </main>
@@ -65,10 +65,10 @@ export default function Profile(props) {
                 <div className={profilestyles.sidebarright}>
                     <main>
                         <h1>
-                            Health History
+                            Health Status History:
                         </h1>
                         {user.history.map(hist => (
-                            <h2>{hist}</h2>
+                            <h3>{hist}</h3>
                         ))}
                     </main>
                 </div>
