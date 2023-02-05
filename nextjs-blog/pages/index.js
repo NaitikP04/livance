@@ -17,7 +17,7 @@ export default function Home(props) {
       <div className={styles.navbar}>
         <Link className={styles.active} href="/">Home</Link>
         <Link href="#">About</Link>
-        <Link href="/users/profile">User Listing</Link>
+        <Link href="/users/1">My Profile</Link>
       </div>     
       <div>
           <div className={styles.sidebarleft}>
@@ -33,7 +33,7 @@ export default function Home(props) {
           </div>
           <div className={styles.sidebarmiddle}>
             <div className={styles.card2}>
-              <textarea className={styles.textarea}  placeholder="What's on your mind?" rows="6" cols="50"></textarea>
+              <textarea className={styles.textarea}  placeholder="What's on your mind?" rows="15" cols="50"></textarea>
             </div>
           </div>
 
