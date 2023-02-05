@@ -5,7 +5,7 @@
             "name": "Naitik Poddar",
             "status": "Sleep deprived",
             "about": "Second year CSGD student at the University of California, Santa Cruz. Tries to be healthy, but fails.",
-            "history": "Natik Poddar's health history",
+            "history": ["Sleep deprived"],
             "profilePic": "https://cdn.discordapp.com/attachments/1071312850271875072/1071585963257643078/IMG_3558.jpg"
         },
         {
@@ -13,16 +13,15 @@
             "name": "Ryan Miller",
             "status": "Slept in today",
             "about": "Surely I am healthy, because I am not dead",
-            "history": "Ryan Miller's health history",
+            "history": ["Slept in today" ],
             "profilePic": "https://cdn.discordapp.com/attachments/1071312850271875072/1071603744673906789/IMG_3560.jpg"
         },
         {
             "id": 2,
             "name": "Eric Phuong",
             "status": "Feeling good today",
-        
             "about": "I've been looking to go to the gym more often to improve my physical health.",
-            "history": "Eric Phuong's health history",
+            "history": ["Feeling good today"],
             "profilePic": "https://cdn.discordapp.com/attachments/1071312850271875072/1071575083832852530/9587850A-0AAA-447B-BFF1-D572B6C13EBE.JPG"
         },
         {
@@ -30,7 +29,7 @@
             "name": "Sammy the Slug",
             "status": "Slugging around",
             "about": "Don't put salt on me.",
-            "history": "Sammy hasn't been stepped on... yet",
+            "history": ["Slugging around"],
             "profilePic": "https://news.ucsc.edu/2011/06/images/slugcloseup350.jpg"
         }
     ]

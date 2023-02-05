@@ -5,17 +5,23 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Layout  from '../components/layout';
 import {useState} from 'react';
-
+import { useRouter } from 'next/router'
 
 export default function Home(props) { // submit bottom
   const users = props.users
+  const router = useRouter()
   const [message, setMessage] = useState('');
-    const handleMessageChange = async event => {
+  if (users[0].status == "Sleep deprived") {
+    let {object} = router.query
+    if (object) {
+      users[0].status = object
+    }
+  }
+  const handleMessageChange = async event => {
     setMessage(event.target.value);
-    console.log(event.target.value);
     users[0].status = event.target.value
-    
   };
+
   return (
     <div className={styles.container}>
       <div>
@@ -31,7 +37,7 @@ export default function Home(props) { // submit bottom
       <div>
           <div className={styles.sidebarleft}>
             {users.map(user => (
-              <Link href={{ pathname: `/users/${user.id}`, query: { object: users[user.id].status } }}>
+              <Link href={{ pathname: `/users/${user.id}`, query: { object: users[0].status } }}>
               <div className={styles.card}>
                 <img src={user.profilePic} alt={user.name} className={styles.profileimage}/>
                 <h2>{user.name}</h2>
@@ -135,7 +141,6 @@ export async function getStaticProps() {
   const filePath = path.join(process.cwd(), 'data.json');
   const jsonData = await fsPromises.readFile(filePath);
   const objectData = JSON.parse(jsonData);
-
   return {
     props: objectData
   }
