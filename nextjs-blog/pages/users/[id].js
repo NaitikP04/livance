@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styles from '../../styles/Home.module.css';
 import profilestyles from '../../styles/profile.module.css';
 import { useRouter } from 'next/router'
+import Image from 'next/image';
 
 export default function Profile(props) {
     const router = useRouter()
@@ -18,32 +19,27 @@ export default function Profile(props) {
                 <Link href="/users/0">My Profile</Link>
             </div>
             <div>
-                {/* <main>
-                    <h1 className={profilestyles.title}>
-                    Go to <Link href="/">Home Page!</Link>
-                    </h1>
-                </main> */}
                 <Head>
                     <title>Profile</title>
                 </Head>
-                {/* <div className={profilestyles.user}></div> */}
                 <div className={profilestyles.card}>
                     <main>
                         <h1>
                             {user.name}
                         </h1>
-                        <p className={profilestyles.title2}>Friend</p>
+                        <p className={profilestyles.title2}>he/him</p>
                         <div>
                             <img src={user.profilePic} className={profilestyles.user}></img>
                         </div>
                     </main>
                 </div>
+                <img src="/mental-health.png" alt="Livance Logo" className={profilestyles.transimg}/>
                 <div className={profilestyles.card2}>
                     <main>
                         <h1>
-                            Status
+                            Current Status:
                         </h1>
-                        <h3>{user.status}</h3>
+                        <h4>{user.status}</h4>
                     </main>
                 </div>
                 <div className={profilestyles.card3}>
