@@ -38,7 +38,11 @@
         {
             "id": 3,
             "name": "Sammy the Slug",
+<<<<<<< HEAD
             "pronouns": "they/them",
+=======
+            "pronouns": "They/Them",
+>>>>>>> d164cc795c8ed73fb3ed5ecb0388afcf0becd0be
             "status": "Slugging around",
             "about": "Don't put salt on me.",
             "history": ["Slugging around", "Slithering around the beautiful UC Santa Cruz campus 🐌 Keeping active and enjoying the great outdoors is one of the best ways to stay healthy 🌲 #SammyTheSlug #UCSCHealthyLiving",
