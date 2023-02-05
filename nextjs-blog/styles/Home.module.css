@@ -230,6 +230,7 @@
 }
 
 .button {
+  width: 35%;
   background-color: #3c91ca;
   border: none;
   color: white;
