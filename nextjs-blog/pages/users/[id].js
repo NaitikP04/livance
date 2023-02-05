@@ -5,18 +5,30 @@ import profilestyles from '../../styles/profile.module.css';
 import { useRouter } from 'next/router'
 import Image from 'next/image';
 
+let history = ["Sleep deprived"]
+
 export default function Profile(props) {
     const router = useRouter()
     const {id} = router.query;
     const {object} = router.query;
     const user = props.users[id];
-    user.status = object
+    if (id == 0 && object) {
+        if (object != history[0]) {
+            for (let i = history.length; i > 0; i--) {
+                history[i] = history[i-1]
+                console.log(i)
+            }
+            history[0] = object
+        }
+        user.history = history
+        user.status = object
+    }
     return (
         <div className={profilestyles.container}>
             <img src="/logonew.png" alt="Livance Logo" className={styles.logo}/>
             <div className={styles.navbar}>
-                <Link className={styles.active} href="/">Home</Link>
-                <Link href="/users/0">My Profile</Link>
+                <Link className={styles.active} href={{ pathname: "/", query: { object } }}>Home</Link>
+                <Link href={{ pathname: "/users/0", query: { object: object } }}>My Profile</Link>
             </div>
             <div>
                 <Head>
@@ -55,7 +67,9 @@ export default function Profile(props) {
                         <h1>
                             Health History
                         </h1>
-                        <h2>{user.history}</h2>
+                        {user.history.map(hist => (
+                            <h2>{hist}</h2>
+                        ))}
                     </main>
                 </div>
             </div>
